@@ -15,6 +15,9 @@ function useJsonFetch(url) {
       .then((json) => {
         setData(json);
         setLoading(false);
+      })
+      .catch(() => {
+        setError(true);
       });
   }, []);
 
